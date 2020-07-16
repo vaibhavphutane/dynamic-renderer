@@ -1,0 +1,32 @@
+
+.add-button {
+  background-color: lightgreen;
+  border-radius: 50%;
+  padding: 12px;
+  border: none;
+}
+.add-button:focus {
+  outline: none;
+}
+
+.action-container {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-left: 10px;
+}
+
+.action-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap ;
+}

@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.card-item {
+  box-shadow: 2px 2px 2px 2px #ccc;
+  width: 200px;
+  height: 180px;
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+  margin: 10px;
+  background-color: #f5cfa0;
+}

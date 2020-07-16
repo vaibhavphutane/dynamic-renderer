@@ -1,0 +1,23 @@
+<table class="table table-bordered">
+  <thead>
+    <th *ngFor="let i of dataArray" >
+     <ng-container *ngFor="let key of i | keyvalue">
+       {{key.key | toReadable}}
+     </ng-container>
+    </th>
+    <tr>
+      <td *ngFor="let i of dataArray">
+        <ng-container *ngFor="let key of i | keyvalue">
+          <ng-container *ngIf="(key.value | type) === 'object'" >
+            <p title="click to view table" (click)="viewTable(key)" class="table-icon">
+              <i class="fa fa-table"></i> View Table
+            </p>
+          </ng-container>
+          <ng-container *ngIf="(key.value | type) !== 'object'" >
+              <app-my-input [item]="key"></app-my-input>
+          </ng-container>
+        </ng-container>
+      </td>
+    </tr>
+  </thead>
+</table>

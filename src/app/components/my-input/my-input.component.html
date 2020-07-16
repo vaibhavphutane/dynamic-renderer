@@ -1,0 +1,16 @@
+<div [ngSwitch]="(item.value | type)">
+  <div *ngSwitchCase="types.STRING">
+      <ng-container *ngIf="item.value | isDate">
+        <input  class="form-control" type="date" [ngModel]="item.value | date:'yyyy-MM-dd'">
+      </ng-container>
+      <ng-container *ngIf="!(item.value | isDate)">
+        <input  class="form-control" type="text" [value]="item.value">
+      </ng-container>
+  </div>
+  <div *ngSwitchCase="types.NUMBER">
+    <input class="form-control" type="number" [value]="item.value">
+  </div>
+  <div *ngSwitchCase="types.TABLE">
+    <app-table (viewNestedTable)="addAnotherTable($event)" [dataArray]="item.value"></app-table>
+  </div>
+</div>
